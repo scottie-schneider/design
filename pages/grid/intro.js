@@ -15,108 +15,58 @@ const StyledBody = styled.body`
   }
 
   body {
-    height: 100%;
-    box-sizing: border-box;
-    padding: 20px 50px;
-  }
-
-  .container {
-    background: #fff;
-    margin-top: 30px;
-    margin-right: 30px;
-  }
-
-  .item {
-    font-size: 1.6rem;
-    padding: 20px;
-    background: #0048aa;
-    color: #fff;
-    border: 2px solid #eee;
-  }
-  .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: max-content 480px max-content 1fr max-content;
+    grid-template-areas:
+      "header header"
+      "video-player related-videos"
+      "video-title related-videos"
+      "comments related-videos"
+      "footer footer";
   }
 
-  .default-container > .item:nth-of-type(3) {
-    grid-column-start: span 3;
+  body > header {
+    border: 1px solid gray;
+    grid-area: header;
   }
 
-  .item-one-to-last-spot-container > .item:first-of-type {
+  body > footer {
+    border: 1px solid gray;
+    grid-area: footer;
   }
 
-  .last-item-to-first-spot-container > .item:last-of-type {
+  #video-player-section {
+    border: 1px solid gray;
+    grid-area: video-player;
   }
 
-  .all-even-items-first-container > .item:nth-of-type(even) {
+  #video-title-section {
+    border: 1px solid gray;
+    grid-area: video-title;
   }
 
-  .jumbled-container > .item:first-of-type {
+  #video-comments-section {
+    border: 1px solid gray;
+    grid-area: comments;
   }
 
-  .jumbled-container > .item:nth-of-type(2) {
-  }
-
-  .jumbled-container > .item:nth-of-type(3) {
-  }
-
-  .jumbled-container > .item:last-of-type {
+  #related-videos-section {
+    border: 1px solid gray;
+    grid-area: related-videos;
   }
 `;
 
 const Intro = () => {
   return (
     <StyledBody>
-      <div class="container default-container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-      </div>
-
-      <div class="container item-one-to-last-spot-container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-      </div>
-
-      <div class="container last-item-to-first-spot-container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-      </div>
-
-      <div class="container all-even-items-first-container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-      </div>
-
-      <div class="container jumbled-container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-      </div>
+      <header>Header Section</header>
+      <div id="video-player-section">Video Player Section</div>
+      <div id="video-title-section">Video Title Section</div>
+      <div id="video-comments-section">Video Comments Section</div>
+      <div id="related-videos-section">Related Videos Section</div>
+      <footer>Footer Section</footer>
     </StyledBody>
   );
 };
