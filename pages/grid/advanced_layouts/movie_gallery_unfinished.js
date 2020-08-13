@@ -30,20 +30,57 @@ const StyledBody = styled.body`
     grid-auto-flow: column;
     grid-auto-columns: 92vw;
     align-items: center;
-    grid-gap: 8vw;
     padding: 4vw 0;
     overflow-x: scroll;
+    grid-gap: 8vw;
+    article {
+      display: grid;
+      align-items: end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      width: 92vw;
+      height: 100%;
+      h2 {
+        margin-bottom: 1vw;
+        font-size: 10vw;
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 
-  #gallery > article {
-    display: grid;
-    align-items: end;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 92vw;
-    height: 100%;
+  @media (orientation: landscape) {
+    header {
+      padding-top: 3vh;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      height: 10vh;
+    }
+    h1 {
+      font-size: 4vh;
+      margin-bottom: 3vh;
+    }
+    main {
+      margin-top: 10vh;
+      padding: 0 2vw;
+    }
+    #gallery article {
+      background-size: 70vh 92vh;
+      background-position: left top;
+    }
+    .details {
+      margin-left: 74vh;
+      height: 100%;
+      padding: 2vh 2vh;
+      padding-top: 0;
+      background: transparent;
+    }
   }
 
   .details {
@@ -51,89 +88,45 @@ const StyledBody = styled.body`
     padding: 2vw 2vw;
     background: rgba(0, 0, 0, 0.4);
   }
-
-  #gallery > article h2 {
-    margin-bottom: 1vw;
-    font-size: 10vw;
+  .main-movie {
+    background-image: url("/the-arcade.jpg");
+    background-size: 70vh 92vh;
+    background-position: left top;
   }
-
-  #gallery > article p {
-    font-size: 4vw;
+  #one {
+    background-image: url("/charlies-angles-revived.jpg");
   }
-
-  ::-webkit-scrollbar {
-    display: none;
+  #two {
+    background-image: url("/equal-minds.jpg");
   }
-
-  @media (orientation: landscape) {
-    body > header {
-      padding-top: 3vh;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      height: 10vh;
-    }
-
-    h1 {
-      font-size: 4vh;
-      margin-bottom: 3vh;
-    }
-
-    body > main {
-      margin-top: 10vh;
-      padding: 0 2vw;
-    }
-
-    #gallery {
-      padding: 4vh 0;
-    }
-
-    #gallery > article {
-      background-size: 70vh 92vh;
-      background-position: left top;
-    }
-
-    .details {
-      margin-left: 75vh;
-      height: 100%;
-      padding: 2vh 2vh;
-      padding-top: 0;
-      background: transparent;
-    }
-
-    #gallery > article h2 {
-      margin-bottom: 2vh;
-      font-size: 7vh;
-    }
-
-    #gallery > article p {
-      font-size: 4vh;
-    }
+  #three {
+    background-image: url("/the-larper.jpg");
   }
-
-  @media (orientation: portrait) and (min-width: 768px) {
-    body > header {
-      padding-top: 3vw;
-      padding-left: 4vw;
-      padding-right: 4vw;
-    }
-
-    h1 {
-      font-size: 4vw;
-      margin-bottom: 3vw;
-    }
-
-    .details {
-      padding: 2vw 2vw;
-      height: 20vw;
-    }
-
-    #gallery > article h2 {
-      font-size: 5vw;
-    }
-
-    #gallery > article p {
-      font-size: 3vw;
-    }
+  #four {
+    background-image: url("/uncle-pete.jpg");
+  }
+  #five {
+    background-image: url("/bus-driver.jpg");
+  }
+  #six {
+    background-image: url("/prepared.jpg");
+  }
+  #seven {
+    background-image: url("/traffic.jpg");
+  }
+  #eight {
+    background-image: url("/horror.jpg");
+  }
+  #nine {
+    background-image: url("/rudolph.jpg");
+  }
+  main {
+    flex: 1 0 0;
+    background: #111;
+    display: flex;
+    padding: 0 4vw;
+    margin-top: 14vw;
+    overflow: hidden;
   }
 `;
 
