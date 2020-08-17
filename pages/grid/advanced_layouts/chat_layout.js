@@ -75,6 +75,36 @@ const StyledBody = styled.body`
   }
   #conversation-list {
     grid-area: conversation-list;
+    .conversation {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 40px 1fr max-content;
+      color: #ddd;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #002c88;
+      padding: 20px 20px 20px 15px;
+    }
+    .conversation-message {
+      font-size: 1rem;
+    }
+    .conversation:active,
+    .conversation:hover {
+      cursor: pointer;
+    }
+    img {
+      height: 40px;
+      border-radius: 100%;
+      grid-row: span 2;
+    }
+    .title-text {
+      font-weight: bold;
+      color: #eee;
+    }
+    .created-date {
+      color: #ddd;
+      white-space: nowrap;
+      font-size: 1rem;
+    }
   }
   #chat-title,
   #chat-form {
@@ -131,7 +161,16 @@ const ChatInterface = () => {
         <div id="search-container">
           <input type="text" placeholder="Search" />
         </div>
-        <div id="conversation-list">This is the conversation list</div>
+        <div id="conversation-list">
+          <div className="conversation">
+            <img src="/ben.png" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
+        </div>
         <div id="new-message-container">
           <a href="#">+</a>
         </div>
