@@ -86,11 +86,12 @@ const StyledBody = styled.body`
     align-content: center;
     align-items: center;
     grid-area: chat-title;
-    colro: #0048aa;
+    color: #0048aa;
     font-weight: bold;
     font-size: 2rem;
     border-radius: 0 10px 0 0;
     box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+    padding: 0 20px;
     img {
       cursor: pointer;
       max-width: 100%;
@@ -100,6 +101,23 @@ const StyledBody = styled.body`
     grid-area: chat-form;
     border-radius: 0 0 10px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.25);
+    padding-left: 42px;
+    padding-right: 22px;
+    display: grid;
+    grid: 51px / 32px 1fr;
+    align-content: center;
+    align-items: center;
+    grid-gap: 15px;
+    img {
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 1.4rem;
+    }
   }
   #chat-message-list {
     grid-area: chat-message-list;
@@ -122,7 +140,10 @@ const ChatInterface = () => {
           <img src="/trash-logo.svg" alt="Delete Conversation" />
         </div>
         <div id="chat-message-list">This is the chat message list</div>
-        <div id="chat-form">This is the form section</div>
+        <div id="chat-form">
+          <img src="/attachment-logo.svg" alt="Add Attachment" />
+          <input type="text" placeholder="type a message" />
+        </div>
       </div>
     </StyledBody>
   );
