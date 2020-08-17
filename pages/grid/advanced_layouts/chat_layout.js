@@ -58,6 +58,20 @@ const StyledBody = styled.body`
     grid-area: new-message-container;
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 0 0 0 10px;
+    padding: 0 15px;
+    display: grid;
+    grid: 40px / 40px;
+    align-content: center;
+    a {
+      display: grid;
+      place-content: center center;
+      background: #eee;
+      border-radius: 100%;
+      color: #002c88;
+      text-decoration: none;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   }
   #conversation-list {
     grid-area: conversation-list;
@@ -93,7 +107,7 @@ const ChatInterface = () => {
         </div>
         <div id="conversation-list">This is the conversation list</div>
         <div id="new-message-container">
-          This is the new conversation/message section
+          <a href="#">+</a>
         </div>
         <div id="chat-title">This is the chat title</div>
         <div id="chat-message-list">This is the chat message list</div>
