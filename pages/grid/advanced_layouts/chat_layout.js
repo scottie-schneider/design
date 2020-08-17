@@ -3,6 +3,9 @@ import styled from "styled-components";
 const StyledBody = styled.body`
   display: grid;
   place-items: center center;
+  * {
+    box-sizing: border-box;
+  }
   #chat-container {
     display: grid;
     grid:
@@ -24,10 +27,32 @@ const StyledBody = styled.body`
     background: #0048aa;
   }
   #search-container {
+    display: grid;
+    align-items: center;
     grid-area: search-container;
+    padding: 0 20px;
     border-radius: 10px 0 0 0;
     box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
     z-index: 1;
+    input {
+      color: #eee;
+      outline: none;
+      font-weight: bold;
+      border-radius: 2px;
+      height: 30px;
+      border: 0;
+      padding-left: 48px;
+      padding-right: 20px;
+      font-size: 1.4rem;
+      overflow: hidden;
+      background: url("/search.svg") no-repeat rgba(255, 255, 255, 0.3);
+      background-position: 15px center;
+      background-size: 20px 20px;
+      ::placeholder {
+        color: #ddd;
+        font-weight: bold;
+      }
+    }
   }
   #new-message-container {
     grid-area: new-message-container;
@@ -63,7 +88,9 @@ const ChatInterface = () => {
   return (
     <StyledBody>
       <div id="chat-container">
-        <div id="search-container">This is the conversation search</div>
+        <div id="search-container">
+          <input type="text" placeholder="Search" />
+        </div>
         <div id="conversation-list">This is the conversation list</div>
         <div id="new-message-container">
           This is the new conversation/message section
