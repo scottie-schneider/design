@@ -81,12 +81,20 @@ const StyledBody = styled.body`
     background: #eee;
   }
   #chat-title {
+    display: grid;
+    grid: 36px / 1fr 36px;
+    align-content: center;
+    align-items: center;
     grid-area: chat-title;
-    color: #0048aa;
+    colro: #0048aa;
     font-weight: bold;
     font-size: 2rem;
     border-radius: 0 10px 0 0;
-    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+    img {
+      cursor: pointer;
+      max-width: 100%;
+    }
   }
   #chat-form {
     grid-area: chat-form;
@@ -109,7 +117,10 @@ const ChatInterface = () => {
         <div id="new-message-container">
           <a href="#">+</a>
         </div>
-        <div id="chat-title">This is the chat title</div>
+        <div id="chat-title">
+          <span>Scottie Schneider</span>
+          <img src="/trash-logo.svg" alt="Delete Conversation" />
+        </div>
         <div id="chat-message-list">This is the chat message list</div>
         <div id="chat-form">This is the form section</div>
       </div>
