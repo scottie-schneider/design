@@ -166,8 +166,18 @@ const StyledBody = styled.body`
     display: flex;
     flex-direction: column-reverse;
     padding: 0 20px;
+    overflow-y: scroll;
     .message-row {
+      display: grid;
+      grid-template-columns: 70%;
       margin-bottom: 20px;
+    }
+    .other-message {
+      justify-items: start;
+    }
+    .you-message {
+      justify-items: end;
+      justify-content: end;
     }
     .message-time {
       font-size: 1.3rem;
@@ -256,6 +266,50 @@ const ChatInterface = () => {
           <img src="/trash-logo.svg" alt="Delete Conversation" />
         </div>
         <div id="chat-message-list">
+          <div className="message-row you-message">
+            <div className="message-text ">Ok then</div>
+            <div className="message-time">Apr 16</div>
+          </div>
+
+          <div className="message-row other-message">
+            <div className="message-text">
+              Yeah I think that's best we do that
+            </div>
+            <div className="message-time">Apr 16</div>
+          </div>
+          <div className="message-row you-message">
+            <div className="message-text ">Ok then</div>
+            <div className="message-time">Apr 16</div>
+          </div>
+
+          <div className="message-row other-message">
+            <div className="message-text">
+              Yeah I think that's best we do that
+            </div>
+            <div className="message-time">Apr 16</div>
+          </div>
+          <div className="message-row you-message">
+            <div className="message-text ">Ok then</div>
+            <div className="message-time">Apr 16</div>
+          </div>
+
+          <div className="message-row other-message">
+            <div className="message-text">
+              Yeah I think that's best we do that
+            </div>
+            <div className="message-time">Apr 16</div>
+          </div>
+          <div className="message-row you-message">
+            <div className="message-text ">Ok then</div>
+            <div className="message-time">Apr 16</div>
+          </div>
+
+          <div className="message-row other-message">
+            <div className="message-text">
+              Yeah I think that's best we do that
+            </div>
+            <div className="message-time">Apr 16</div>
+          </div>
           <div className="message-row you-message">
             <div className="message-text ">Ok then</div>
             <div className="message-time">Apr 16</div>
