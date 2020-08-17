@@ -86,6 +86,11 @@ const StyledBody = styled.body`
     }
     .conversation-message {
       font-size: 1rem;
+      grid-column: span 2;
+      padding-left: 5px;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
     }
     .conversation:active,
     .conversation:hover {
@@ -99,6 +104,10 @@ const StyledBody = styled.body`
     .title-text {
       font-weight: bold;
       color: #eee;
+      padding-left: 5px;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
     }
     .created-date {
       color: #ddd;
