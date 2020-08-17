@@ -75,6 +75,7 @@ const StyledBody = styled.body`
   }
   #conversation-list {
     grid-area: conversation-list;
+    overflow-y: scroll;
     .conversation {
       display: grid;
       grid-gap: 10px;
@@ -98,6 +99,8 @@ const StyledBody = styled.body`
     }
     img {
       height: 40px;
+      width: 40px;
+      object-fit: cover;
       border-radius: 100%;
       grid-row: span 2;
     }
@@ -160,6 +163,31 @@ const StyledBody = styled.body`
   }
   #chat-message-list {
     grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    .message-row {
+      margin-bottom: 20px;
+    }
+    .message-time {
+      font-size: 1.3rem;
+      color: #777;
+    }
+    .message-text {
+      padding: 9px 14px;
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+    .you-message .message-text {
+      background: #0048aa;
+      border-radius: 14px 14px 0 14px;
+    }
+    .other-message .message-text {
+      background: #eee;
+      color: #111;
+      border: 1px solid #ddd;
+      border-radius: 14px 14px 14px 0;
+    }
   }
 `;
 
@@ -179,6 +207,46 @@ const ChatInterface = () => {
               This is a message abslkjslej;flses;e
             </div>
           </div>
+          <div className="conversation">
+            <img src="/daryl.png" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
+          <div className="conversation">
+            <img src="/douglas.png" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
+          <div className="conversation">
+            <img src="/john.jpeg" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
+          <div className="conversation">
+            <img src="/kim.jpeg" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
+          <div className="conversation">
+            <img src="/ben.png" alt="Ben" />
+            <div className="title-text">Ben Smith abcsdefghik</div>
+            <div className="created-date">Apr 16</div>
+            <div className="conversation-message">
+              This is a message abslkjslej;flses;e
+            </div>
+          </div>
         </div>
         <div id="new-message-container">
           <a href="#">+</a>
@@ -187,7 +255,19 @@ const ChatInterface = () => {
           <span>Scottie Schneider</span>
           <img src="/trash-logo.svg" alt="Delete Conversation" />
         </div>
-        <div id="chat-message-list">This is the chat message list</div>
+        <div id="chat-message-list">
+          <div className="message-row you-message">
+            <div className="message-text ">Ok then</div>
+            <div className="message-time">Apr 16</div>
+          </div>
+
+          <div className="message-row other-message">
+            <div className="message-text">
+              Yeah I think that's best we do that
+            </div>
+            <div className="message-time">Apr 16</div>
+          </div>
+        </div>
         <div id="chat-form">
           <img src="/attachment-logo.svg" alt="Add Attachment" />
           <input type="text" placeholder="type a message" />
