@@ -36,6 +36,7 @@ const StyledBody = styled.div`
     }
   }
   main {
+    padding-top: 24px;
     background: #fff;
     display: grid;
     grid:
@@ -45,6 +46,31 @@ const StyledBody = styled.div`
     grid-row-gap: 24px;
     #store-search-container {
       grid-area: store-search;
+      form {
+        display: grid;
+        grid: 1fr / 30px 1fr;
+        align-content: center;
+        align-items: center;
+        border-bottom: 1px solid #8a8;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      input {
+        border: none;
+        outline: none;
+        padding: 8px;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        background: transparent;
+        color: #262;
+        ::placeholder {
+          color: #aca;
+          font-weight: normal;
+        }
+      }
     }
     #main-delivery-container {
       grid-area: main-delivery;
@@ -68,7 +94,12 @@ const UberEats = () => {
         <img src="/profile-logo.svg" alt="Profile Settings" />
       </header>
       <main>
-        <div id="store-search-container">Store search goes here</div>{" "}
+        <div id="store-search-container">
+          <form>
+            <img src="/store-search-icon.svg" />
+            <input type="text" placeholder="Search for a place to eat" />
+          </form>
+        </div>{" "}
         <div id="main-delivery-container">Main delivery form goes here </div>
         <section id="store-list-container"> store list goes here</section>
       </main>
