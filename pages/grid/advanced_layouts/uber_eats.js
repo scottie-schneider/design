@@ -31,6 +31,9 @@ const StyledBody = styled.div`
       display: flex;
       align-items: center;
       img {
+        @media (max-width: 386px) {
+          display: none;
+        }
         border-radius: 0;
         height: 3-px;
       }
@@ -47,9 +50,11 @@ const StyledBody = styled.div`
     grid-row-gap: 24px;
     #store-search-container {
       grid-area: store-search;
+      border: 2px solid red;
       form {
         display: grid;
-        grid: 1fr / 30px 1fr;
+        grid: 1fr / 30px minmax(30px, 1fr);
+        flex-wrap: wrap;
         align-content: center;
         align-items: center;
         border-bottom: 1px solid #8a8;
@@ -80,6 +85,9 @@ const StyledBody = styled.div`
           max-content,
           3fr
         );
+      @media (max-width: 454px) {
+        grid: repeat(4, max-content) / 1fr;
+      }
       grid-gap: 8px;
       padding-top: 16px;
       .main-delivery-label {

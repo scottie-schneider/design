@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body, html, #__next {    
-    margin: 0;
-    min-height: 100%;
+  body, html, #__next {            
+    margin: 0;    
     height: 100%;
     width: 100%;
+    min-width: 100%;
     box-sizing: border-box;
   }
 `;
