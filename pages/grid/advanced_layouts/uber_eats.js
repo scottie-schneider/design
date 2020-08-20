@@ -10,6 +10,7 @@ const StyledBody = styled.div`
   display: grid;
   grid: 74px 1fr max-content / 1fr;
   max-width: 100%;
+
   header,
   main,
   footer {
@@ -38,6 +39,41 @@ const StyledBody = styled.div`
         height: 3-px;
       }
     }
+  }
+  #burgaz .thumbnail-image {
+    background-image: url("/burgaz.png");
+  }
+
+  #super-sanga .thumbnail-image {
+    background-image: url("/super-sanga.png");
+  }
+
+  #mctuckey .thumbnail-image {
+    background-image: url(../images/stores/mctuckey.png);
+  }
+
+  #straya .thumbnail-image {
+    background-image: url(../images/stores/straya.png);
+  }
+
+  #snags .thumbnail-image {
+    background-image: url(../images/stores/snags.png);
+  }
+
+  #oi .thumbnail-image {
+    background-image: url(../images/stores/oi.png);
+  }
+
+  #chips-mate .thumbnail-image {
+    background-image: url(../images/stores/chips-mate.png);
+  }
+
+  #fridee-nights .thumbnail-image {
+    background-image: url(../images/stores/fridee-nights.png);
+  }
+
+  #maccas .thumbnail-image {
+    background-image: url(../images/stores/maccas.png);
   }
   main {
     padding-top: 24px;
@@ -101,6 +137,50 @@ const StyledBody = styled.div`
     }
     #store-list-container {
       grid-area: store-list;
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-top: 16px;
+        margin-bottom: 32px;
+      }
+      ul {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #262626;
+        }
+        li article {
+          background: #fd6;
+          padding-bottom: 20px;
+          p:last-of-type {
+            img {
+              width: 14px;
+              height: 14px;
+            }
+            span {
+              padding: 4px 8px;
+              background: #007340;
+              color: #fff;
+            }
+          }
+          h3 {
+            color: #007340;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-top: 10px;
+            padding: 0 10px;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+          }
+          .thumbnail-image {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 200px;
+          }
+        }
+      }
     }
   }
   footer {
@@ -130,7 +210,212 @@ const UberEats = () => {
           <div className="main-delivery-label">To</div>
           <div className="main-delivery-choice">123 Main St</div>
         </div>
-        <section id="store-list-container"> store list goes here</section>
+        <section id="store-list-container">
+          <h2>Food Delivery in Medellin</h2>
+          <ul>
+            <li>
+              <a href="#">
+                <article id="burgaz">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Burgaz</h3>
+                  </header>
+                  <p>
+                    $ &middot; Fast Food &middot; BBQ &middot; Burger &middot;
+                    Halal
+                  </p>
+                  <p>
+                    <span>20-30 min</span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="super-sanga">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Super Sanga</h3>
+                  </header>
+                  <p>
+                    $ &middot; Sandwich &middot; Breakfast and brunch &middot;
+                    Healthy
+                  </p>
+                  <p>
+                    <span>10-20 min</span>
+                    <span>
+                      4.4
+                      <img
+                        src="images/icons/hot-fire-white.svg"
+                        alt="Hot Fire White"
+                      />
+                      (78)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="mctuckey">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>McTuckey</h3>
+                  </header>
+                  <p>$ &middot; Chicken &middot; Healthy</p>
+                  <p>
+                    <span>10-20 min</span>
+                    <span>
+                      4.5
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (336)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="straya">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Straya</h3>
+                  </header>
+                  <p>$ &middot; Fast Food &middot; Pies</p>
+                  <p>
+                    <span>5-10 min</span>
+                    <span>
+                      4.9
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (5604)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="snags">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Snags</h3>
+                  </header>
+                  <p>$ &middot; Meat &middot; Barbeque &middot; Fast Food</p>
+                  <p>
+                    <span>15-25 min</span>
+                    <span>
+                      4.8
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (124)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="oi">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Oi!!</h3>
+                  </header>
+                  <p>$ &middot; Classic &middot; Salty &middot; Beautiful</p>
+                  <p>
+                    <span>10-20 min</span>
+                    <span>
+                      5.0
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (1535)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="chips-mate">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Chips Mate</h3>
+                  </header>
+                  <p>$ &middot; Fast Food &middot; Potatoes</p>
+                  <p>
+                    <span>10-15 min</span>
+                    <span>
+                      4.6
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (2044)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="fridee-nights">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Fridee Nights</h3>
+                  </header>
+                  <p>
+                    $ &middot; Seafood &middot; Dinner Time &middot; Fast Food
+                  </p>
+                  <p>
+                    <span>25-40 min</span>
+                    <span>
+                      4.9
+                      <img
+                        src="images/icons/hot-fire-gold.svg"
+                        alt="Hot Fire Gold"
+                      />
+                      (1604)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article id="maccas">
+                  <header>
+                    <div class="thumbnail-image"></div>
+                    <h3>Maccas</h3>
+                  </header>
+                  <p>
+                    $ &middot; Fast Food &middot; Fries &middot; Nuggets
+                    &middot; Burgers
+                  </p>
+                  <p>
+                    <span>20-25 min</span>
+                    <span>
+                      3.8
+                      <img
+                        src="images/icons/hot-fire-white.svg"
+                        alt="Hot Fire White"
+                      />
+                      (98)
+                    </span>
+                  </p>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </section>
       </main>
       <footer>Footer goes here</footer>
     </StyledBody>
