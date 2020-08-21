@@ -40,11 +40,11 @@ const StyledBody = styled.div`
       }
     }
   }
-  #burgaz .thumbnail-image {
+  #burgaz header {
     background-image: url("/burgaz.png");
   }
 
-  #super-sanga .thumbnail-image {
+  #super-sanga header {
     background-image: url("/super-sanga.png");
   }
 
@@ -145,6 +145,7 @@ const StyledBody = styled.div`
       }
       ul {
         list-style: none;
+        padding-inline-start: 0;
         a {
           text-decoration: none;
           color: #262626;
