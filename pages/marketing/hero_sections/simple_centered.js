@@ -8,21 +8,45 @@ const StyledDiv = styled.div`
     "header" 40px
     "main" 1fr / 1fr;
   header {
+    .login {
+      background: white;
+      width: 80px;
+      height: 42px;
+      padding: 0.5rem 1rem;
+      color: #434190;
+      line-height: 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      display: inline-flex;
+      border-radius: 0.375rem;
+      border: transparent;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
     display: flex;
     justify-content: space-between;
     grid-area: header;
-    border: 1px solid red;
     img {
       height: 40px;
       width: 40px;
     }
     nav {
+      display: flex;
       ul {
         display: flex;
+        align-items: center;
         li {
+          &:not(:first-child) {
+            margin-left: 40px;
+          }
           list-style: none;
           a {
             text-decoration: none;
+            font-weight: 500;
+            color: #4a5568;
+            &:hover {
+              color: #1a202c;
+            }
           }
         }
       }
@@ -30,7 +54,6 @@ const StyledDiv = styled.div`
   }
   main {
     grid-area: main;
-    border: 1px solid green;
   }
 `;
 const SimpleCentered = () => {
