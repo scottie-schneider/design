@@ -7,11 +7,22 @@ const StyledDiv = styled.div`
   grid:
     "header" 40px
     "main" 1fr / 1fr;
+  button {
+    cursor: pointer;
+  }
   header {
     padding-top: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    .links {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
     .login {
+      @media (max-width: 768px) {
+        display: none;
+      }
       background: white;
       width: 80px;
       height: 42px;
@@ -32,6 +43,20 @@ const StyledDiv = styled.div`
     img {
       height: 40px;
       width: 40px;
+    }
+    .menu {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      color: #9fa6b2;
+      transition: all 150ms ease-in-out;
+      &:hover {
+        color: #1a202c;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
     nav {
       display: flex;
@@ -73,6 +98,9 @@ const StyledDiv = styled.div`
       }
     }
     h3 {
+      @media (max-width: 768px) {
+        max-width: 28rem;
+      }
       text-align: center;
       max-width: 48rem;
       margin-top: 1.25rem;
@@ -112,7 +140,7 @@ const SimpleCentered = () => {
         {/* Logo */}
         <img src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" />
         {/* Nav menu  */}
-        <nav>
+        <nav className="links">
           <ul>
             <li>
               <a href="#">Product</a>
@@ -128,6 +156,12 @@ const SimpleCentered = () => {
             </li>
           </ul>
         </nav>
+        {/* Nav button for smaller screens */}
+        <div className="menu">
+          <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 20">
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </div>
         {/* Log in button */}
         <button className="login">Log in</button>
       </header>
