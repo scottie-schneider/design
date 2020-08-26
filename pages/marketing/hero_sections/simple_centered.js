@@ -8,6 +8,9 @@ const StyledDiv = styled.div`
     "header" 40px
     "main" 1fr / 1fr;
   header {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     .login {
       background: white;
       width: 80px;
@@ -54,6 +57,52 @@ const StyledDiv = styled.div`
   }
   main {
     grid-area: main;
+    display: grid;
+    grid-template-rows: 128px 60px 1fr;
+    justify-items: center;
+    margin-top: 4rem;
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: 800;
+      margin: 0;
+      height: 128px;
+      span {
+        color: #5850ec;
+      }
+    }
+    h3 {
+      text-align: center;
+      max-width: 48rem;
+      margin-top: 1.25rem;
+      font-size: 1.25rem;
+      color: #6b7280;
+    }
+    .buttons {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      height: 58px;
+      .demo,
+      .start {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        border: 0 solid #d2d6dc;
+      }
+      .demo {
+        margin-left: 0.75rem;
+      }
+      .start {
+        background-color: #5850ec;
+        color: white;
+      }
+    }
   }
 `;
 const SimpleCentered = () => {
@@ -84,7 +133,7 @@ const SimpleCentered = () => {
       </header>
       <main>
         <h1>
-          Data to enrich your{" "}
+          Data to enrich your <br />
           <span className="highlighted">online business</span>
         </h1>
         <h3 className="subtext">
@@ -92,8 +141,10 @@ const SimpleCentered = () => {
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua.
         </h3>
-        <button className="start">Get started</button>
-        <button className="demo">Live demo</button>
+        <div className="buttons">
+          <button className="start">Get started</button>
+          <button className="demo">Live demo</button>
+        </div>
       </main>
     </StyledDiv>
   );
