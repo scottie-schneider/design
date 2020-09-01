@@ -45,6 +45,9 @@ const StyledDiv = styled.div`
       width: 40px;
     }
     .menu {
+      @media (min-width: 768px) {
+        display: none;
+      }
       cursor: pointer;
       width: 24px;
       height: 24px;
