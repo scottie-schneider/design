@@ -90,8 +90,17 @@ const StyledDiv = styled.div`
     justify-items: center;
     margin-top: 4rem;
     h1 {
-      text-align: center;
       font-size: 4rem;
+      @media (max-width: 640px) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 3rem;
+      }
+      text-align: center;
       line-height: 1;
       font-weight: 800;
       margin: 0;
