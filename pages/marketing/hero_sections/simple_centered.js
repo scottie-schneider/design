@@ -1,7 +1,21 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
+  .menu {
+    position: absolute;
+    background: #fff;
+    border: 1px solid red;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 300px;
+    margin: 1rem;
+    border-radius: 0.5rem;
+  }
   height: 100%;
+  overflow-x: hidden;
   background: #f7fafc;
   display: grid;
   grid:
@@ -146,8 +160,15 @@ const StyledDiv = styled.div`
   }
 `;
 const SimpleCentered = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <StyledDiv>
+      {/* Mobile Menu, show hide */}
+      {menuOpen ? (
+        <div className="menu">
+          <p>Hi</p>
+        </div>
+      ) : null}
       <header>
         {/* Logo */}
         <img src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" />
@@ -169,7 +190,7 @@ const SimpleCentered = () => {
           </ul>
         </nav>
         {/* Nav button for smaller screens */}
-        <div className="menu">
+        <div onClick={() => setMenuOpen(true)} className="menu">
           <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 20">
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
@@ -179,7 +200,7 @@ const SimpleCentered = () => {
       </header>
       <main>
         <h1>
-          Data to enrich your <br />
+          Sandra to enrich your <br />
           <span className="highlighted">online business</span>
         </h1>
         <h3 className="subtext">
